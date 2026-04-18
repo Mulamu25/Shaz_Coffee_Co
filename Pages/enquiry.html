@@ -3,9 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SHAZ COFFEE CO. | Enquiry</title>
 </head>
 <body>
+
+    <!-- Header Section - Logo left and navigation on the right-->
+     <header>
+        <table width="100%">
+            <tr>
+                <td align="left">
+                    <img src="../Assets/images/logo.png" alt="logo" width="60">
+                    SHAZ COFFEE CO.
+
+
+                </td>
+                <td align="right">
+                    <nav>
+                        <a href="../index.html">HOME</a>
+                        <a href="./menu.html">MENU</a>
+                        <a href="./about_us.html">ABOUT</a>
+                        <a href="./enquiry.html">ENQUIRY</a>
+                        <a href="./contact_us.html">CONTACT</a>
+                    </nav>
+
+                </td>
+            </tr>
+
+        </table>
+     </header>
+
+     <hr>
+     <main>
+
+        <!-- PAGE TITLE-->
+         <section align="center">
+            <h1>Send Us an Enquiry</h1>
+            <p>Have a question or feedback? Fill out the form below.</p>
+
+         </section>
+
+         <br><br>
+
+         <!-- ENQUIRY FORM SECTION -->
+          <section align="center">
+
+            <!-- Form - action="#" it means that there's no backend for Part 1 -->
+             <form action="#" method="post">
+
+                <!-- NAME FIELD -->
+                 <table>
+                    <tr> 
+                        <td align="right">
+                            <label for="name">Full Name:</label>
+
+                        </td>
+                        <td>
+                            <input type="text" id="name" name="name" required size="40">
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <td colspan="2""><br></td>
+                    </tr>
+
+                    <!-- Email field -->
+                     <tr>
+                        <td align="right">
+                            <label for="email">Email Address:</label>
+                        </td>
+                        <td>
+                            <input type="email" id="email" name="email" required size="40">
+                        </td>
+                     </tr>
+                     <tr>
+                        <td colspan="2"><br></td>
+                     </tr>
+
+                     <!-- SUBJECT FIELD( YOU TYPE IN UR MSG)-->
+                      <tr>
+                        <td align="right">
+                            <label for="subject">Subject:</label>
+                        </td>
+                        <td>
+                            <select name="subject" id="subject">
+                                <option value="">-- Select a subject --</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="catering">Catering Request</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2"><br></td>
+                      </tr>
+
+
+                      <!-- Message Field -->
+                       <tr>
+                        <td align="right" valign="top">
+                            <label for="message">Message</label>
+                        </td>
+                        <td>
+                            <textarea name="message" id="message" rows="6" cols="38" required placeholder="Type your message here..."></textarea>
+                        </td>
+                       </tr>
+                       <tr>
+                        <td colspan="2"><br></td>
+                       </tr>
+
+                       <!-- Submit Button -->
+                        <tr>
+                            <td colspan="2" align="center">
+                                <button type="submit">Submit Enquiry</button>
+                            </td>
+                        </tr>
+                 </table>
+             </form>
+
+             <br>
+             <p><strong>Note:</strong>All fields are required. We will respond withhin 24-48 hours.</p>
+
+          </section>
+     </main>
+
+     <br><br>
+
+     <hr>
+
+     <!-- Footer-->
+      <footer align="center">
+        <p>&copy; 2026 SHAZ COFFEE CO. All rights reserved.</p>
+        <p><a href="enquiry.html">Back to Top</a></p>
+      </footer>
     
 </body>
 </html>
