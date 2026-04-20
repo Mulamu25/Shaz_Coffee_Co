@@ -11,7 +11,7 @@ The brand is inspired by modern café culture, focusing on comfort, community, a
 ## How to View the Website
 
 1. Clone or download this repository to your local machine
-2. Open the `index.html` file in any web browser (Chrome, Firefox, Edge, etc.)
+2. Open the `index.html` file in any web browser (Chrome, Edge)
 3. Navigate through the pages using the menu links
 
 **No internet connection required** after download - all assets are local.
