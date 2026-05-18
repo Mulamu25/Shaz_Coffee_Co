@@ -4,31 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHAZ COFFEE CO. | Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Assets/css/style.css">
 </head>
+
 <body>
 
     <!--Header: Logo on left, navigation on right-->
     <header>
-        <table width="100%">
-            <tr>
-                <td align="left">
-                    <img src="../Assets/images/logo.png" alt="SHAZ COFFEE CO. Logo" width="60">
-                    SHAZ COFFEE CO.
+    <div class="logo">
+         <img src="../Assets/images/logo.png" alt="SHAZ COFFEE CO. Logo" width="60"/>
+                <div class="logo-text">
+                    <span>SHAZ COFFEE CO.</span>
+                </div>
+    </div>
+       <nav>
 
-                </td>
-                <td align="right">
-
-                    <!--Navigation link to all 5 pages-->
-                    <a href="../index.html">HOME</a>
-                    <a href="./menu.html">MENU</a>
-                    <a href="./about_us.html">ABOUT</a>
-                    <a href="./enquiry.html">ENQUIRY</a>
-                    <a href="./contact_us.html">CONTACT</a>
-                </td>
-            </tr>
-
-        </table>
-    </header>
+                <a href="../index.html">HOME</a>
+                <a href="menu.html" class="active">MENU</a>
+                <a href="about_us.html">ABOUT</a>
+                <a href="enquiry.html">ENQUIRY</a>
+                <a href="contact_us.html">CONTACT</a>
+        </nav>
+           
+</header>
     
     <hr>
 
@@ -199,21 +198,18 @@
     <hr>
 
     <!-- Footer with copyright and back to top link -->
-     <footer align="center">
-        <table width="100%" cellpadding="20">
-        <tr>
-            <!--First column: About us-->
-            <td width="33%" valign="top">
-            <h2>About SHAZ COFFEE CO.</h2>
+     <footer>
+    <div class="footer-container">
+        <div class="footer-col">
+             <h2>About SHAZ COFFEE CO.</h2>
             <p>SHAZ COFFEE CO. is a conceptual coffee shop designed to provide high-quality coffee and a relaxing environment for customers.
                 The brand is inspired by modern cafe culture, focusing on comfort, community, and premium beverages.
-                It aims to create a welcoming space where people can meet, work, or unwind while enjoying freshly brewed coffee. </p>
-             </p>
-            </td>
-
-            <!--Second column: Important links-->
-            <td width="33%" valign="top">
-                <h2>IMPORTANT LINKS</h2>
+                It aims to create a welcoming space where people can meet, work, or unwind while enjoying freshly brewed coffee.
+             </p>         
+        </div>
+    
+    <div class="footer-col">
+            <h2>IMPORTANT LINKS</h2>
                 <ul type="none">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="./menu.html">Menu</a></li>
@@ -221,11 +217,9 @@
                     <li><a href="./enquiry.html">Enquiry</a></li>
                     <li><a href="./contact_us.html">Contact Us</a></li>
                 </ul>
-            </td>
-
-            <!--Third column: Contact us-->
-            <td width="33%" valign="top">
-                <h2>Contact Us</h2>
+    </div>
+        <div class="footer-col">
+            <h2>Contact Us</h2>
                 <p><strong>Address:</strong>
                 80 Voortrekker Road<br>
                 Polokwane, 0699<br>
@@ -234,12 +228,11 @@
                 082 123 4567</p>
                 <p><strong>Email:</strong>
                 mmulamuleli@icloud.com</p>
-            </td>
-        </tr>
-    </table>
-    <!--Copyright section-->
-        <p>&copy; 2026 SHAZ COFFEE CO. All rights reserved.</p>
-        <p><a href="#">Back to Top</a></p>
+        </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 SHAZ COFFEE CO. All rights reserved.</p>
+        </div>
 
      </footer>
     

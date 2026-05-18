@@ -124,3 +124,11 @@ Email: mmulamuleli@icloud.com
 ---
 
 © 2026 SHAZ COFFEE CO. All rights reserved.
+###2026-05-16-Logo Animation
+- Added 360- degree rotation animation to logo on hover 
+- Used CSS transfor, and transition properties
+- Enhances user interactiom amd visual appeal
+###2026-05-17-Typography Enhancement
+- Changed font from monospace to Poppins (Google Fonts)
+- Improved readability with better font-weight and line-height
+- Added consistent font across all 5 pages

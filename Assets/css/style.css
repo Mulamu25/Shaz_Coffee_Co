@@ -6,6 +6,7 @@
     --dark-text: #2C2C2C;
     --spacing: 20px;
     --border-radius: 12px;
+    --white: #FFFFFF;
 
 }
 
@@ -15,9 +16,9 @@ body{
     background-color: var(--warm-cream);
     margin-left: var(--spacing);
     padding: var(--spacing);
-    font-family: monospace;
-    font: size 1.1rem;;
-    font-weight: 200px;
+    font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
 
 }
 header{
@@ -45,6 +46,10 @@ header{
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
+    transition: transform 0.6s ease-in-out;
+   }
+   .logo img:hover{
+    transform:rotate(360deg);
    }
 
    .logo-text span{
@@ -82,6 +87,97 @@ button{
     background: var(--burnt-orange);
     border-radius: var(--border-radius);
 }
+
 footer{
-    background: var(--coffee-brown);
+    background:var(--coffee-brown);
+    margin-top: 50px;
 }
+/*Footer Container - 3 columns horizontally */
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/* 3 equal columns */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.footer-col{
+    text-align: left;
+}
+
+/*Footer Text and Links */
+.footer-col p,
+.footer-col li{
+    color: var(--white);
+}
+
+/*Footer Heading */
+.footer-col h2{
+    color: var(--burnt-orange);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-col h2:after{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--burnt-orange);
+}
+
+.footer-col ul{
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li{
+    margin: 0.5rem 0;
+}
+
+.footer-col a{
+    color:var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-col a:hover{
+    color: var(--burnt-orange);
+    padding-left: 5px;
+}
+/*Copyright Section */
+.copyright{
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 0;
+}
+
+/*=================================
+RESPONSIVE MEDIA QUERIES
+==============================*/
+
+/*Tablet View*/
+@media screen and (max-width:1024px){
+    .footer-container{
+        grid-template-columns: repeat(2, 1fr); /* 2 columns instead of 3 */
+
+    }
+}
+
+/*Mobile View */
+@media screen and (max-width:768px){
+    .footer-container{
+        grid-template-columns: 1fr; /*Mobile: 1 column(stacked)*/
+
+    }
+
+    .footer-col{
+    text-align: center;
+}
+}
+
