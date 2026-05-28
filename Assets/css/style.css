@@ -73,6 +73,7 @@ header{
     letter-spacing: 0.5px;
    }
    /*Active page styling */
+
    nav a.active{
     color:var(--burnt-orange);
     background-color: rgba(255, 255, 255, 0.15);
@@ -172,6 +173,15 @@ RESPONSIVE MEDIA QUERIES
 
 /*Mobile View */
 @media screen and (max-width:768px){
+    header {
+        flex-direction: column;
+       text-align: center;
+        gap: 15px;
+    }
+
+    .logo {
+        justify-content: center;
+    }
     .footer-container{
         grid-template-columns: 1fr; /*Mobile: 1 column(stacked)*/
 
