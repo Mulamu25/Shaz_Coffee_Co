@@ -54,7 +54,7 @@ header{
     color: var(--burnt-orange);
 }
 
-/* Navigation Styles - SAME STYLES FOR ALL DEVICES */
+/* Navigation Styles */
 nav{
     display: flex;
     gap: 15px;
@@ -66,7 +66,7 @@ nav a{
     font-weight: 600;
     font-size: 1rem;
     padding: 10px 18px;
-    border-radius: 25px;  /* ← SAME oval shape for all devices */
+    border-radius: 25px;
     transition: all 0.3s ease;
     letter-spacing: 0.5px;
 }
@@ -108,13 +108,11 @@ footer{
     text-align: left;
 }
 
-/* Footer Text and Links */
 .footer-col p,
 .footer-col li{
     color: var(--white);
 }
 
-/* Footer Heading */
 .footer-col h2{
     color: var(--burnt-orange);
     font-size: 1.2rem;
@@ -153,7 +151,6 @@ footer{
     padding-left: 5px;
 }
 
-/* Copyright Section */
 .copyright{
     text-align: center;
     padding: 1.5rem;
@@ -175,20 +172,20 @@ footer{
 
 /* Mobile View */
 @media screen and (max-width: 768px){
-    /* Header - stack vertically but KEEP SAME PADDING */
     header {
         flex-direction: column;
         text-align: center;
         gap: 10px;
-        padding: 12px 20px;  /* Slightly smaller padding for mobile */
+        padding: 12px 20px;
         margin: 5px;
     }
 
     .logo {
         justify-content: center;
     }
-     .logo img {
-        width: 40px;  /* Slightly smaller on mobile */
+    
+    .logo img {
+        width: 40px;
         height: 40px;
     }
     
@@ -196,7 +193,6 @@ footer{
         font-size: 1rem;
     }
 
-    /* Navigation - stack vertically but KEEP SAME OVAL SHAPE */
     nav {
         flex-direction: column;
         gap: 5px;
@@ -205,27 +201,21 @@ footer{
     }
 
     nav a {
-        display: inline-block;  /* Keep oval shape */
+        display: inline-block;
         text-align: center;
-        padding: 8px 16px;  /* Same padding as desktop */
-        width: auto;  /* Auto width, not 100% */
-        min-width: 100px;  /* Minimum width for consistency */
-        background-color: transparent;  /* No background by default */
-        border-radius: 25px;  /* ← SAME oval shape as desktop */
+        padding: 8px 16px;
+        width: auto;
+        min-width: 100px;
+        background-color: transparent;
+        border-radius: 25px;
         font-size: 0.95rem;
     }
 
-    /* Active page on mobile - keep same style */
     nav a.active {
         background-color: rgba(255, 255, 255, 0.15);
         border-bottom: 2px solid var(--burnt-orange);
     }
-    form button {
-        width: 100%;
-        margin: 5px 0;
-    }
 
-    /* Footer - stack vertically */
     .footer-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -242,7 +232,7 @@ footer{
         transform: translateX(-50%);
     }
 
-    /* Menu page - fix table stacking */
+    /* Menu page - stack tables vertically on mobile */
     section table,
     section tbody,
     section tr,
@@ -257,43 +247,18 @@ footer{
         padding: 10px;
     }
 
-    /* Keep images square */
+    /* Keep your original image sizes on mobile */
     section table td img {
-        width: 150px !important;
-        height: 150px !important;
-        object-fit: cover;
-        border-radius: 0 !important;
-    }
-    form table,
-    form tbody,
-    form tr,
-    form td {
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-    
-    form td {
-        padding: 5px 0;
-    }
-    
-    form input, 
-    form select, 
-    form textarea {
-        width: 100%;
-        max-width: 100%;
-    }
-    
-    /* Fix contact page table */
-    table[width="80%"] {
-        width: 100% !important;
+        width: 200px ;
+        height: auto ;
+        border-radius: 0 ;
     }
 }
 
 /* Tablet screens for menu images */
 @media screen and (max-width: 1024px) and (min-width: 769px) {
     section table td img {
-        width: 200px !important;
-        height: 200px !important;
+        width: 220px ;
+        height: auto t;
     }
 }
