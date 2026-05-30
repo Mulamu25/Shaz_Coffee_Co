@@ -82,13 +82,13 @@ SHAZ_COFFEE_/
 
 ## Features
 
-- ✅ 5 fully linked HTML pages
-- ✅ Consistent navigation menu on all pages
-- ✅ Enquiry form with required field validation
-- ✅ Embedded Google Maps iframe on contact page
-- ✅ Customer favourites section on homepage
-- ✅ Menu page with organised categories (Coffee, Cold Drinks, Snacks)
-- ✅ Back to Top links on all inner pages
+- 5 fully linked HTML pages
+- Consistent navigation menu on all pages
+- Enquiry form with required field validation
+- Embedded Google Maps iframe on contact page
+-  Customer favourites section on homepage
+-  Menu page with organised categories (Coffee, Cold Drinks, Snacks)
+- Back to Top links on all inner pages
 
 ---
 
@@ -132,3 +132,117 @@ Email: mmulamuleli@icloud.com
 - Changed font from monospace to Poppins (Google Fonts)
 - Improved readability with better font-weight and line-height
 - Added consistent font across all 5 pages
+
+#  SHAZ COFFEE CO. - Complete Website Project
+
+**Student Name:** Mulamuleli Mungadi  
+**Student Number:** ST10498756  
+**Course:** DISD1 MID YEAR INTAKE  
+**Module:** Web Development  
+
+---
+
+## Part 1: Project Proposal & HTML Structure
+
+[KEEP ALL YOUR EXISTING PART 1 CONTENT HERE]
+- Organization Overview
+- Website Goals and Objectives
+- Proposed Features
+- Wireframes
+- Sitemap
+- Budget
+- Technical Requirements
+- Timeline
+- Part 1 Changelog
+
+---
+
+## Part 2: CSS Styling and Responsive Design
+
+### Color Palette
+
+Based on the SHAZ COFFEE CO. proposal, the following color scheme was implemented:
+
+| Color Name | Hex Code | Usage |
+|------------|----------|-------|
+| Coffee Brown | `#3E2723` | Header, Footer, Navigation background |
+| Burnt Orange | `#E67E22` | Buttons, Links, Active page indicator |
+| Warm Cream | `#FFF8E7` | Main page background |
+| Soft Grey | `#757575` | Secondary text |
+| White | `#FFFFFF` | Text on dark backgrounds |
+
+### Technologies Used
+
+- **HTML5** - Semantic markup structure
+- **CSS3** - Styling, animations, and responsive design
+- **Google Fonts** - Poppins font family
+- **CSS Grid** - Footer layout
+- **CSS Flexbox** - Navigation layout
+- **Media Queries** - Responsive design
+
+### Features Implemented
+
+| Feature | Implementation |
+|---------|----------------|
+| CSS Reset | `* { margin:0; padding:0; box-sizing: border-box; }` |
+| CSS Variables | Color palette stored in `:root` |
+| External Stylesheet | Single `style.css` linked to all 5 pages |
+| Flexbox Navigation | Horizontal, stacks on mobile |
+| CSS Grid Footer | 3 columns desktop → 2 tablet → 1 mobile |
+| Pseudo-classes | `:hover`, `:active`, `:focus` |
+| Active Page Indicator | Orange text + underline |
+| Logo Animation | 360° rotation on hover |
+| Sticky Header | `position: sticky; top: 0;` |
+
+### Responsive Design Breakpoints
+
+| Breakpoint | Layout Changes |
+|------------|----------------|
+| Desktop (>1024px) | 3-column footer, horizontal navigation |
+| Tablet (768px - 1024px) | 2-column footer, horizontal navigation |
+| Mobile (<768px) | 1-column footer, logo on top, wrapped navigation |
+
+### Part 2 Changelog
+
+| Date | Version | Description |
+|------|---------|-------------|
+| 2026-05-16 | v2.0 | Created external CSS with variables and reset |
+| 2026-05-17 | v2.1 | Added Flexbox navigation and Grid footer |
+| 2026-05-24 | v2.2 | Added responsive media queries for tablet/mobile |
+| 2026-05-27 | v2.3 | Added logo animation and active page styling |
+| 2026-05-28 | v2.4 | Fixed mobile navigation (horizontal wrap) |
+| 2026-05-29 | v2.5 | Final polish, form styling, hover effects |
+
+### References
+
+- Google Fonts. (2026). *Poppins Font Family*.
+- MDN Web Docs. (2026). *CSS Grid Layout*.
+- MDN Web Docs. (2026). *CSS Flexbox*.
+- MDN Web Docs. (2026). *Media Queries*.
+
+### Rubric Compliance Checklist
+
+| Requirement | Status |
+|-------------|--------|
+| External CSS Stylesheet 
+| CSS Reset 
+| CSS Variables 
+| Typography Styling 
+| Flexbox Layout 
+| Grid Layout 
+| Pseudo-classes 
+| Media Queries 
+| Responsive Layout 
+| Responsive Navigation 
+| Responsive Images 
+| Active Page Indicator 
+
+---
+
+## Conclusion
+
+SHAZ COFFEE CO. website successfully demonstrates all Part 1 and Part 2 requirements, including professional branding, responsive design, and modern CSS techniques.
+
+---
+
+**© 2026 SHAZ COFFEE CO. All rights reserved.**
