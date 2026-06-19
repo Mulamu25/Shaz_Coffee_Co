@@ -1,24 +1,78 @@
-:root{
+/* ============================================
+   SHAZ COFFEE CO. - Complete Stylesheet
+   Part 3: Responsive Design + Hamburger Menu
+   ============================================ */
+
+/* ---------- 1. CSS RESET ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- 2. CSS VARIABLES (Color Palette) ---------- */
+:root {
     --warm-cream: #FFF8E7;
     --coffee-brown: #3E2723;
     --burnt-orange: #E67E22;
     --soft-grey: #757575;
     --dark-text: #2C2C2C;
+    --light-cream: #FDF9F0;
+    --border-light: #E0D5C0;
+    --white: #FFFFFF;
     --spacing: 20px;
     --border-radius: 12px;
-    --white: #FFFFFF;
+    --shadow: 0 4px 15px rgba(62, 39, 35, 0.1);
+    --transition: all 0.3s ease;
 }
 
-body{
+/* ---------- 3. BASE STYLES ---------- */
+body {
     background-color: var(--warm-cream);
-    margin-left: var(--spacing);
-    padding: var(--spacing);
     font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-    font-size: 1.1rem;
-    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark-text);
 }
 
-header{
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--coffee-brown);
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- 4. HEADER & NAVIGATION ---------- */
+header {
     background-color: var(--coffee-brown);
     padding: 15px 30px;
     border-radius: 10px;
@@ -30,15 +84,16 @@ header{
     top: 0;
     z-index: 100;
     margin: 10px;
+    box-shadow: var(--shadow);
 }
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.logo img{
+.logo img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -46,56 +101,116 @@ header{
     transition: transform 0.6s ease-in-out;
 }
 
-.logo img:hover{
+.logo img:hover {
     transform: rotate(360deg);
 }
 
-.logo-text span{
+.logo-text {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.logo-text span {
     color: var(--burnt-orange);
 }
 
-
-nav{
+/* Navigation - Desktop */
+nav {
     display: flex;
     gap: 15px;
 }
 
-nav a{
-    color: #FFF8E7;
+nav a {
+    color: var(--white);
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
     padding: 10px 18px;
     border-radius: 25px;
-    transition: all 0.3s ease;
+    transition: var(--transition);
     letter-spacing: 0.5px;
 }
 
-/* Active page styling */
-nav a.active{
+nav a:hover {
+    color: var(--burnt-orange);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav a.active {
     color: var(--burnt-orange);
     background-color: rgba(255, 255, 255, 0.15);
     border-bottom: 2px solid var(--burnt-orange);
 }
 
-nav a:hover{
-    color: var(--burnt-orange);
+/* ---------- 5. ANIMATED HAMBURGER MENU ICON (Part 3) ---------- */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100;
 }
 
-button{
-    background: var(--burnt-orange);
-    border-radius: var(--border-radius);
+.menu-icon div {
+    width: 30px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 6px 0;
+    transition: all 0.3s ease;
+    border-radius: 3px;
 }
 
-footer{
-    background: var(--coffee-brown);
+/* When menu is open - turns into X */
+.menu-icon.open .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-icon.open .bar2 {
+    opacity: 0;
+}
+
+.menu-icon.open .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* ---------- 6. BUTTONS ---------- */
+button, .btn {
+    background-color: var(--burnt-orange);
+    color: var(--white);
+    border: none;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: inherit;
+    margin: 10px;
+}
+
+button:hover, .btn:hover {
+    background-color: #D35400;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+button:active, .btn:active {
+    transform: translateY(0);
+}
+
+button:focus, .btn:focus {
+    outline: 3px solid rgba(230, 126, 34, 0.4);
+}
+
+/* ---------- 7. FOOTER (CSS Grid - 3 Columns) ---------- */
+footer {
+    background-color: var(--coffee-brown);
     margin-top: 50px;
     border-radius: 10px;
     overflow: hidden;
 }
 
-/* Footer Container - 3 columns horizontally */
-.footer-container{
+.footer-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -104,16 +219,11 @@ footer{
     padding: 2rem;
 }
 
-.footer-col{
+.footer-col {
     text-align: left;
 }
 
-.footer-col p,
-.footer-col li{
-    color: var(--white);
-}
-
-.footer-col h2{
+.footer-col h2 {
     color: var(--burnt-orange);
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -121,7 +231,7 @@ footer{
     display: inline-block;
 }
 
-.footer-col h2:after{
+.footer-col h2:after {
     content: '';
     position: absolute;
     bottom: -8px;
@@ -131,71 +241,368 @@ footer{
     background-color: var(--burnt-orange);
 }
 
-.footer-col ul{
+.footer-col p, 
+.footer-col li {
+    color: var(--white);
+}
+
+.footer-col ul {
     list-style: none;
     padding: 0;
 }
 
-.footer-col ul li{
+.footer-col ul li {
     margin: 0.5rem 0;
 }
 
-.footer-col a{
+.footer-col a {
     color: var(--white);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: var(--transition);
 }
 
-.footer-col a:hover{
+.footer-col a:hover {
     color: var(--burnt-orange);
     padding-left: 5px;
 }
 
-.copyright{
+.copyright {
     text-align: center;
     padding: 1.5rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 0;
+    color: var(--burnt-orange);
+    font-size: 0.9rem;
+}
+
+/* ---------- 8. BACK TO TOP BUTTON (Part 3) ---------- */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--burnt-orange);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.back-to-top:hover {
+    background: #D35400;
+    transform: scale(1.1);
+}
+
+/* ---------- 9. LIGHTBOX GALLERY (Part 3) ---------- */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox-content {
+    text-align: center;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+.lightbox-content p {
+    color: white;
+    margin-top: 10px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* ---------- 10. WELCOME MODAL (Part 3) ---------- */
+.welcome-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: var(--warm-cream);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 400px;
+    position: relative;
+    animation: slideIn 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--coffee-brown);
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+}
+
+.modal-content button {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.modal-content small {
+    cursor: pointer;
+    color: var(--soft-grey);
+}
+
+.modal-content small:hover {
     color: var(--burnt-orange);
 }
- 
-section table td img {
-    box-shadow: 0 0 20px rgba(230, 126, 34, 0.5);
+
+/* ---------- 11. ACCORDION FAQ (Part 3) ---------- */
+.accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid var(--border-light);
     border-radius: 10px;
-    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);  
+    overflow: hidden;
 }
 
-
-section table td img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(230, 126, 34, 0.8);
+.accordion-header {
+    background: var(--coffee-brown);
+    color: var(--white);
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
+.accordion-header:hover {
+    background: #5D4037;
+}
 
+.accordion-content {
+    background: var(--light-cream);
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
 
-/* =================================
-   RESPONSIVE MEDIA QUERIES
-   ================================= */
+.accordion-content.active {
+    padding: 15px 20px;
+    max-height: 200px;
+}
 
-/* Tablet View */
-@media screen and (max-width: 1024px){
-    .footer-container{
+/* ---------- 12. SEARCH & FILTER BAR (Part 3) ---------- */
+.search-filter-bar {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.search-filter-bar input,
+.search-filter-bar select {
+    padding: 10px 15px;
+    border: 1px solid var(--border-light);
+    border-radius: 25px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.search-filter-bar input {
+    width: 250px;
+}
+
+.search-filter-bar input:focus,
+.search-filter-bar select:focus {
+    outline: none;
+    border-color: var(--burnt-orange);
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+}
+
+/* ---------- 13. FORM STYLES (Enquiry Page) ---------- */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--light-cream);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--coffee-brown);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--burnt-orange);
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+}
+
+.form-group .error {
+    border-color: #E67E22;
+}
+
+.error-message {
+    color: #E67E22;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.success-message {
+    color: #4CAF50;
+    font-size: 1rem;
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 8px;
+}
+
+.error-messages {
+    color: #E67E22;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(230, 126, 34, 0.1);
+    border-radius: 8px;
+}
+
+.submit-btn {
+    background: var(--burnt-orange);
+    color: var(--white);
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: #D35400;
+    transform: translateY(-2px);
+}
+
+/* ---------- 14. MAP CONTAINER ---------- */
+.map-container {
+    max-width: 100%;
+}
+
+.map-container iframe {
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.directions-btn {
+    display: inline-block;
+    background: var(--coffee-brown);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: var(--transition);
+}
+
+.directions-btn:hover {
+    background: var(--burnt-orange);
+    color: var(--white);
+}
+
+/* ---------- 15. RESPONSIVE DESIGN ---------- */
+
+/* Tablet Breakpoint */
+@media screen and (max-width: 1024px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    
+    .footer-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
-/* Mobile View */
-@media screen and (max-width: 768px){
+/* Mobile Breakpoint */
+@media screen and (max-width: 768px) {
+    body { font-size: 0.9rem; }
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.3rem; }
+    
+    /* Header - logo left, hamburger right */
     header {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         padding: 12px 20px;
         margin: 5px;
-    }
-
-    .logo {
-        justify-content: center;
     }
     
     .logo img {
@@ -204,77 +611,163 @@ section table td img:hover {
     }
     
     .logo-text {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
-
+    
+    /* Show hamburger icon on mobile */
+    .menu-icon {
+        display: block;
+    }
+    
+    /* Navigation - slides in from left */
     nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
+        position: fixed;
+        top: 80px;
+        left: -100%;
         width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--coffee-brown);
+        flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        transition: left 0.3s ease;
+        z-index: 99;
+        gap: 1rem;
+        margin: 0;
+        border-radius: 0;
     }
-
+    
+    nav.active {
+        left: 0;
+    }
+    
     nav a {
-        display: inline-block;
+        display: block;
+        width: 80%;
         text-align: center;
-        padding: 8px 16px;
-        width: auto;
-        min-width: 100px;
-        background-color: transparent;
-        border-radius: 25px;
-        font-size: 0.95rem;
+        padding: 12px 20px;
+        font-size: 1.1rem;
+        border-radius: 50px;
     }
-
+    
+    nav a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
     nav a.active {
         background-color: rgba(255, 255, 255, 0.15);
         border-bottom: 2px solid var(--burnt-orange);
     }
-
+    
+    /* Buttons full width on mobile */
+    button, .btn {
+        width: 80%;
+        max-width: 250px;
+        padding: 10px 20px;
+    }
+    
+    /* Footer stacks vertically */
     .footer-container {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 1rem;
+        gap: 1.5rem;
         padding: 1rem;
     }
-
+    
     .footer-col {
         text-align: center;
     }
-
+    
     .footer-col h2:after {
         left: 50%;
         transform: translateX(-50%);
     }
-   
-
-    /* Menu page - stack tables vertically on mobile */
-    section table,
-    section tbody,
-    section tr,
-    section td {
+    
+    /* Tables stack on mobile */
+    table, tbody, tr, td {
         display: block;
         width: 100%;
-    }
-
-    section td {
         text-align: center;
+    }
+    
+    td {
         margin-bottom: 1.5rem;
         padding: 10px;
     }
-
+    
+    /* Menu images on mobile */
     section table td img {
-        width: 200px ;
-        height: auto ;
-        border-radius: 0 ;
+        width: 150px;
+        height: auto;
+        border-radius: 0;
+    }
+    
+    /* Search bar on mobile */
+    .search-filter-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .search-filter-bar input {
+        width: 100%;
+    }
+    
+    /* Modal on mobile */
+    .modal-content {
+        margin: 20px;
+        padding: 1.5rem;
+    }
+    
+    /* Form on mobile */
+    form {
+        padding: 1.5rem;
+        margin: 0 10px;
+    }
+    
+    /* Back to top button on mobile */
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
     }
 }
 
-/* Tablet screens for menu images */
-@media screen and (max-width: 1024px) and (min-width: 769px) {
-    section table td img {
-        width: 220px ;
-        height: auto t;
+/* Small Mobile Breakpoint */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+    
+    .logo img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .logo-text {
+        font-size: 0.8rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav a {
+        font-size: 1rem;
+        padding: 10px 16px;
+    }
+    
+    .footer-container {
+        padding: 0.8rem;
     }
 }
+
+/* ---------- 16. UTILITY CLASSES ---------- */
+.text-center { text-align: center; }
+.text-orange { color: var(--burnt-orange); }
+.text-brown { color: var(--coffee-brown); }
+.mt-1 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 1rem; }
+.hidden { display: none; }
