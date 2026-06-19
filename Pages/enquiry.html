@@ -13,176 +13,124 @@
 </head>
 
 <body>
+    <header>
+        <div class="logo">
+            <img src="../Assets/images/logo.png" alt="SHAZ COFFEE CO. Logo" width="60"/>
+            <div class="logo-text">
+                <span>SHAZ</span> COFFEE CO.
+            </div>
+        </div>
 
-    <!-- Header Section - Logo left and navigation on the right-->
-     <header>
-    <div class="logo">
-         <img src="../Assets/images/logo.png" alt="SHAZ COFFEE CO. Logo" width="60"/>
-                <div class="logo-text">
-                    <span>SHAZ COFFEE CO.</span>
-                </div>
-    </div>
-
-    <!-- This is the hamburger menu for mobile view -->
-    <div class="menu-icon" id="menuIcon">
+        <div class="menu-icon" id="menuIcon">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
+        </div>
 
-    </div>
-       <nav id="navbar">
-
-                <a href="../index.html">HOME</a>
-                <a href="menu.html">MENU</a>
-                <a href="about_us.html">ABOUT</a>
-                <a href="enquiry.html" class="active">ENQUIRY</a>
-                <a href="contact_us.html">CONTACT</a>
+        <nav id="navbar">
+            <a href="../index.html">HOME</a>
+            <a href="menu.html">MENU</a>
+            <a href="about_us.html">ABOUT</a>
+            <a href="enquiry.html" class="active">ENQUIRY</a>
+            <a href="contact_us.html">CONTACT</a>
         </nav>
-           
-</header>
+    </header>
+    <hr>
 
-     <hr>
-
-     <!-- Main content section -->
-     <main>
-
-        <!-- PAGE TITLE-->
-         <section align="center">
+    <main>
+        <section align="center">
             <h1>Send Us an Enquiry</h1>
             <p>Have a question or feedback? Fill out the form below.</p>
+        </section>
 
-         </section>
+        <br><br>
 
-         <br><br>
+        <section align="center">
+            <form id="enquiryForm" method="post">
+                <h3>Enquiry Form</h3>
+                
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="082 123 4567">
+                </div>
+                
+                <div class="form-group">
+                    <label for="enquiryType">Enquiry Type *</label>
+                    <select id="enquiryType" name="enquiryType" required>
+                        <option value="">-- Select an option --</option>
+                        <option value="Catering Request"> Catering Request</option>
+                        <option value="Sponsorship"> Sponsorship</option>
+                        <option value="Volunteer">Volunteer</option>
+                        <option value="General Enquiry"> General Enquiry</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Tell us more about your enquiry..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to our newsletter for exclusive offers</label>
+                </div>
+                
+                <button type="submit" class="submit-btn">Submit Enquiry</button>
+                <div id="formMessage"></div>
+            </form>
+            
+            <br>
+            <p><strong>Note:</strong> All fields marked with * are required. We will respond within 24-48 hours.</p>
+        </section>
+    </main>
 
-         <!-- ENQUIRY FORM SECTION -->
-          <section align="center">
+    <br><br>
+    <hr>
 
-            <!-- Form - action="#" it means that there's no backend for Part 1 -->
-             <form action="#" method="post">
-
-                <!-- NAME FIELD -->
-                 <table>
-                    <tr> 
-                        <td align="right">
-                            <label for="name">Full Name:</label>
-
-                        </td>
-                        <td>
-                            <input type="text" id="name" name="name" required size="40">
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td colspan="2"><br>
-                        </td>
-                    </tr>
-
-                    <!-- Email field -->
-                     <tr>
-                        <td align="right">
-                            <label for="email">Email Address:</label>
-                        </td>
-                        <td>
-                            <input type="email" id="email" name="email" required size="40">
-                        </td>
-                     </tr>
-                     <tr>
-                        <td colspan="2"><br>
-                        </td>
-                     </tr>
-
-                     <!-- SUBJECT FIELD-->
-                      <tr>
-                        <td align="right">
-                            <label for="subject">Subject:</label>
-                        </td>
-                        <td>
-                            <select name="subject" id="subject">
-                                <option value="">-- Select a subject --</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="feedback">Feedback</option>
-                                <option value="catering">Catering Request</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td colspan="2"><br></td>
-                      </tr>
-
-
-                      <!-- Message Field -->
-                       <tr>
-                        <td align="right" valign="top">
-                            <label for="message">Message</label>
-                        </td>
-                        <td>
-                            <textarea name="message" id="message" rows="6" cols="38" required placeholder="Type your message here..."></textarea>
-                        </td>
-                       </tr>
-                       <tr>
-                        <td colspan="2"><br></td>
-                       </tr>
-
-                       <!-- Submit Button -->
-                        <tr>
-                            <td colspan="2" align="center">
-                                <button type="submit">Submit Enquiry</button>
-                                <button type="reset">Clear Form</button>
-                            </td>
-                        </tr>
-                 </table>
-             </form>
-
-             <br>
-             <p><strong>Note:</strong>All fields are required. We will respond within 24-48 hours.</p>
-
-          </section>
-     </main>
-
-     <br><br>
-
-     <hr>
-
-     <!-- Footer-->
-      <footer>
-    <div class="footer-container">
-        <div class="footer-col">
-             <h2>About SHAZ COFFEE CO.</h2>
-            <p>SHAZ COFFEE CO. is a conceptual coffee shop designed to provide high-quality coffee and a relaxing environment for customers.
-                The brand is inspired by modern cafe culture, focusing on comfort, community, and premium beverages.
-                It aims to create a welcoming space where people can meet, work, or unwind while enjoying freshly brewed coffee.
-             </p>         
-        </div>
-    
-    <div class="footer-col">
-            <h2>IMPORTANT LINKS</h2>
-                <ul type="none">
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h2>About SHAZ COFFEE CO.</h2>
+                <p>SHAZ COFFEE CO. is a conceptual coffee shop designed to provide high-quality coffee and a relaxing environment for customers. The brand is inspired by modern cafe culture, focusing on comfort, community, and premium beverages.</p>         
+            </div>
+            <div class="footer-col">
+                <h2>IMPORTANT LINKS</h2>
+                <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="./menu.html">Menu</a></li>
-                    <li><a href="./about_us.html">About Us</a></li>
-                    <li><a href="./enquiry.html">Enquiry</a></li>
-                    <li><a href="./contact_us.html">Contact Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
                 </ul>
-    </div>
-        <div class="footer-col">
-            <h2>Contact Us</h2>
-                <p><strong>Address:</strong>
-                80 Voortrekker Road<br>
-                Polokwane, 0699<br>
-                South Africa</p>
-                <p><strong>Mobile:</strong>
-                082 123 4567</p>
-                <p><strong>Email:</strong>
-                mmulamuleli@icloud.com</p>
+            </div>
+            <div class="footer-col">
+                <h2>Contact Us</h2>
+                <p><strong>Address:</strong><br>80 Voortrekker Road<br>Polokwane, 0699<br>South Africa</p>
+                <p><strong>Mobile:</strong><br>082 123 4567</p>
+                <p><strong>Email:</strong><br>mmulamuleli@icloud.com</p>
+            </div>
         </div>
+
+        <!-- Live Date & Time -->
+        <div class="live-datetime">
+            <p id="datetime">Loading...</p>
         </div>
+
         <div class="copyright">
             <p>&copy; 2026 SHAZ COFFEE CO. All rights reserved.</p>
         </div>
+    </footer>
 
-     </footer>
     <script src="../Assets/js/script.js"></script>
 </body>
 </html>

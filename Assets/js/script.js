@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.innerHTML = `
                 <div class="modal-content">
                     <span class="modal-close">&times;</span>
-                    <h2>Welcome to SHAZ COFFEE CO.!</h2>
+                    <h2>Welcome to SHAZ COFFEE CO.</h2>
                     <p>Enjoy 10% off your first order when you sign up for our newsletter!</p>
                     <input type="email" id="modalEmail" placeholder="Enter your email address">
                     <button id="modalSubscribeBtn" class="btn">Subscribe Now</button>
@@ -282,25 +282,27 @@ document.addEventListener('DOMContentLoaded', function() {
         let isValid = true;
         
         const name = document.getElementById('name')?.value.trim();
+        const email = document.getElementById('email')?.value.trim();
+        const phone = document.getElementById('phone')?.value.trim();
+        const enquiryType = document.getElementById('enquiryType')?.value;
+        const message = document.getElementById('message')?.value.trim();
+        
         if (!name || name.length < 2) {
             showError('name', 'Please enter your full name (minimum 2 characters)');
             isValid = false;
         }
         
-        const email = document.getElementById('email')?.value.trim();
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!email || !emailRegex.test(email)) {
             showError('email', 'Please enter a valid email address');
             isValid = false;
         }
         
-        const enquiryType = document.getElementById('enquiryType')?.value;
         if (!enquiryType || enquiryType === '') {
             showError('enquiryType', 'Please select an enquiry type');
             isValid = false;
         }
         
-        const message = document.getElementById('message')?.value.trim();
         if (!message || message.length < 10) {
             showError('message', 'Please enter a message (minimum 10 characters)');
             isValid = false;
@@ -309,11 +311,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const formMessage = document.getElementById('formMessage');
         if (formMessage) {
             if (isValid) {
-                formMessage.innerHTML = '<div class="success-message">Thank you! Your enquiry has been sent. We will respond within 24-48 hours.</div>';
+                // Process the form - show email summary
+                const formData = {
+                    name: name,
+                    email: email,
+                    phone: phone || 'Not provided',
+                    subject: enquiryType || 'General Enquiry',
+                    message: message
+                };
+                processEnquiryForm(formData);
                 document.getElementById('enquiryForm')?.reset();
-                setTimeout(function() {
-                    formMessage.innerHTML = '';
-                }, 5000);
             } else {
                 formMessage.innerHTML = '<div class="error-messages">Please fix the errors above and try again.</div>';
             }
@@ -340,59 +347,65 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ========================================
-    // 8. CONTACT FORM VALIDATION
+    // 8. FORM PROCESSING - SIMULATED EMAIL
     // ========================================
     
-    function validateContactForm() {
-        clearErrors();
-        let isValid = true;
-        
-        const name = document.getElementById('contactName')?.value.trim();
-        if (!name || name.length < 2) {
-            showError('contactName', 'Please enter your full name');
-            isValid = false;
+    function processEnquiryForm(data) {
+        const formMessage = document.getElementById('formMessage');
+        if (formMessage) {
+            formMessage.innerHTML = `
+                <div class="email-summary">
+                    <h3>Enquiry Sent Successfully</h3>
+                    <div class="summary-details">
+                        <p><strong>To:</strong> mmulamuleli@icloud.com</p>
+                        <p><strong>From:</strong> ${data.email}</p>
+                        <p><strong>Name:</strong> ${data.name}</p>
+                        <p><strong>Subject:</strong> ${data.subject}</p>
+                        <p><strong>Phone:</strong> ${data.phone}</p>
+                        <p><strong>Message:</strong></p>
+                        <p class="summary-message">${data.message}</p>
+                    </div>
+                    <p class="summary-note">We will respond within 24-48 hours.</p>
+                </div>
+            `;
+            formMessage.scrollIntoView({ behavior: 'smooth' });
         }
-        
-        const email = document.getElementById('contactEmail')?.value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!email || !emailRegex.test(email)) {
-            showError('contactEmail', 'Please enter a valid email address');
-            isValid = false;
-        }
-        
-        const message = document.getElementById('contactMessage')?.value.trim();
-        if (!message || message.length < 10) {
-            showError('contactMessage', 'Please enter a message (minimum 10 characters)');
-            isValid = false;
-        }
-        
-        const contactFormMessage = document.getElementById('contactFormMessage');
-        if (contactFormMessage) {
-            if (isValid) {
-                contactFormMessage.innerHTML = '<div class="success-message">Thank you! Your message has been sent. We will get back to you soon.</div>';
-                document.getElementById('contactForm')?.reset();
-                setTimeout(function() {
-                    contactFormMessage.innerHTML = '';
-                }, 5000);
-            } else {
-                contactFormMessage.innerHTML = '<div class="error-messages">Please fix the errors above.</div>';
-            }
-        }
-        
-        return isValid;
-    }
-    
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            validateContactForm();
-        });
     }
     
     // ========================================
-    // 9. CONSOLE MESSAGE
+    // 9. LIVE DATE & TIME DISPLAY
     // ========================================
     
-    console.log('SHAZ COFFEE CO. JavaScript loaded successfully!');
+    function updateDateTime() {
+        const now = new Date();
+        
+        const options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        };
+        
+        const formattedDateTime = now.toLocaleDateString('en-ZA', options);
+        
+        const datetimeElement = document.getElementById('datetime');
+        if (datetimeElement) {
+            datetimeElement.textContent = formattedDateTime;
+        }
+    }
+    
+    // Update immediately
+    updateDateTime();
+    
+    // Update every second
+    setInterval(updateDateTime, 1000);
+    
+    // ========================================
+    // 10. CONSOLE MESSAGE
+    // ========================================
+    
+    console.log('SHAZ COFFEE CO. JavaScript loaded successfully.');
 });

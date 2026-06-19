@@ -13,240 +13,190 @@
 </head>
 
 <body>
-
-    <!--Header: Logo on left, navigation on right-->
     <header>
         <div class="logo">
-         <img src="../Assets/images/logo.png" alt="SHAZ COFFEE CO. Logo" width="60"/>
-                <div class="logo-text">
-                    <span>SHAZ COFFEE CO.</span>
-                </div>
-    </div>
+            <img src="../Assets/images/logo.png" alt="SHAZ COFFEE CO. Logo" width="60"/>
+            <div class="logo-text">
+                <span>SHAZ</span> COFFEE CO.
+            </div>
+        </div>
 
-    <!-- This is the hamburger menu for mobile view -->
-    <div class="menu-icon" id="menuIcon">
+        <div class="menu-icon" id="menuIcon">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
+        </div>
 
-    </div>
-       <nav id="navbar">
-
-                <a href="../index.html">HOME</a>
-                <a href="menu.html" class="active">MENU</a>
-                <a href="about_us.html">ABOUT</a>
-                <a href="enquiry.html">ENQUIRY</a>
-                <a href="contact_us.html">CONTACT</a>
+        <nav id="navbar">
+            <a href="../index.html">HOME</a>
+            <a href="menu.html" class="active">MENU</a>
+            <a href="about_us.html">ABOUT</a>
+            <a href="enquiry.html">ENQUIRY</a>
+            <a href="contact_us.html">CONTACT</a>
         </nav>
-           
-</header>
-    
+    </header>
     <hr>
 
-    <!-- Main content section -->
     <main>
-
-        <!--Page title-->
         <section align="center">
             <h1>Our Menu</h1>
             <p>Fresh coffee, cold drinks, and tasty snacks</p>
         </section>
 
+        <!-- Search & Filter Bar -->
+        <div class="search-filter-bar">
+            <input type="text" id="menuSearch" placeholder="Search menu items...">
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="coffee">Coffee</option>
+                <option value="cold"> Cold Drinks</option>
+                <option value="snack"> Snacks</option>
+            </select>
+        </div>
 
-        <br><br>
-
-        <!-- === COFFEE SECTION===-->
-         <!--6 coffee items. The first row has 4 items, the second row has 2 items-->
-         <section>
+        <!-- Coffee Section -->
+        <section>
             <h2 align="center">Coffee</h2>
             <br>
-
-
-            <!--First row: Espresso, Latte, Cold Brew, Cappuccino -->
             <table width="100%">
                 <tr>
                     <td align="center" width="25%">
-                        <img src="../Assets/images/espresso.jpg" alt="Fresh espresso coffee" width="300">
-
+                        <img src="../Assets/images/espresso.jpg" alt="Fresh espresso coffee shot with rich golden crema layer" width="300">
                         <h3>Espresso</h3>
                         <p><strong>R25.00</strong></p>
-
                     </td>
                     <td align="center" width="25%">
-                        <img src="../Assets/images/latte.jpg" alt="Creamy caramel latte" width="300">
-
+                        <img src="../Assets/images/latte.jpg" alt="Creamy caramel latte with beautiful latte art foam" width="300">
                         <h3>Caramel Latte</h3>
                         <p><strong>R35.00</strong></p>
                     </td>
                     <td align="center" width="25%">
-                        <img src="../Assets/images/cold-brew.jpg" alt="Smooth cold brew coffee" width="300">
+                        <img src="../Assets/images/cold-brew.jpg" alt="Smooth cold brew coffee served over ice" width="300">
                         <h3>Cold Brew</h3>
                         <p><strong>R30.00</strong></p>
                     </td>
                     <td align="center" width="25%">
-                        <img src="../Assets/images/cappuccino.jpg" alt="Rich cappuccino with foam" width="300">
-
+                        <img src="../Assets/images/cappuccino.jpg" alt="Rich cappuccino with thick foam and chocolate dusting" width="300">
                         <h3>Cappuccino</h3>
                         <p><strong>R32.00</strong></p>
                     </td>
                 </tr>
             </table>
-
             <br><br>
-
-            <!--Second row: Americano, Mocha-->
             <table width="100%">
                 <tr>
                     <td align="center" width="50%">
-                        <img src="../Assets/images/americano.jpg" alt="Classic Americano coffee" width="300">
-
+                        <img src="../Assets/images/americano.jpg" alt="Classic Americano coffee - bold and smooth" width="300">
                         <h3>Americano</h3>
                         <p><strong>R28.00</strong></p>
                     </td>
                     <td align="center" width="50%">
-                        <img src="../Assets/images/mocha.jpg" alt="Chocolate mocha coffee" width="300">
-
+                        <img src="../Assets/images/mocha.jpg" alt="Chocolate mocha coffee - perfect blend of coffee and chocolate" width="300">
                         <h3>Mocha</h3>
                         <p><strong>R38.00</strong></p>
                     </td>
                 </tr>
             </table>
-         </section>
+        </section>
 
-
-         <br><br>
-
-         <!-- ====COLD DRINKS SECTION =====-->
-          <!--4 drinks in one row-->
-          <section>
+        <!-- Cold Drinks Section -->
+        <section>
             <h2 align="center">Cold Drinks</h2>
             <br>
-
-
             <table width="100%">
                 <tr>
                     <td align="center" width="25%">
-                        <img src="../Assets/images/iced-coffee.jpg" alt="Refreshing iced coffee" width="300">
-
+                        <img src="../Assets/images/iced-coffee.jpg" alt="Refreshing iced coffee served with ice cubes" width="300">
                         <h3>Iced Coffee</h3>
                         <p><strong>R30.00</strong></p>
-
                     </td>
                     <td align="center" width="25%">
-                        <img src="../Assets/images/iced-latte.jpg" alt="Iced latte drink" width="300">
-
+                        <img src="../Assets/images/iced-latte.jpg" alt="Iced latte drink with creamy texture" width="300">
                         <h3>Iced Latte</h3>
                         <p><strong>R35.00</strong></p>
-
                     </td>
                     <td align="center" width="25%">
-                        <img src="../Assets/images/frappuccino.jpg" alt="Blended frappuccino" width="300">
-
+                        <img src="../Assets/images/frappuccino.jpg" alt="Blended frappuccino with whipped cream topping" width="300">
                         <h3>Frappuccino</h3>
                         <p><strong>R40.00</strong></p>
-
                     </td>
                     <td align="center" width="25%">
-                        <img src="../Assets/images/lemonade.jpg" alt="Fresh homemade lemonade" width="300">
-
+                        <img src="../Assets/images/lemonade.jpg" alt="Fresh homemade lemonade - sweet and tangy" width="300">
                         <h3>Fresh Lemonade</h3>
                         <p><strong>R25.00</strong></p>
-
-
                     </td>
                 </tr>
             </table>
-          </section>
+        </section>
 
-
-          <br><br><br>
-
-
-          <!-- ====SNACKS SECTION ====-->
-           <!-- 4 snacks ine one row -->
-            <section>
-                <h2 align="center"> Snacks</h2>
-                <br>
-
-
-                <table width="100%">
-                    <tr>
-                        <td align="center" width="25%">
-                            <img src="../Assets/images/lemon-cake.jpg" alt="Lemon drizzle cake slice" width="300">
-
-                            <h3>Lemon Drizzle Cake</h3>
-                            <p><strong>R45.00</strong></p>
-
-                        </td>
-                        <td align="center" width="25%">
-                            <img src="../Assets/images/red-velvet.jpg" alt="Red velvet cake" width="300">
-
-                            <h3>Red Velvet Cake</h3>
-                            <p><strong>R55.00</strong></p>
-
-                        </td>
-                        <td align="center" width="25%">
-                            <img src="../Assets/images/muffin.jpg" alt="Blueberry muffin" width="300">
-
-                            <h3>Blueberry Muffin</h3>
-                            <p><strong>R22.00</strong></p>
-
-                        </td>
-                        <td align="center" width="25%">
-                            <img src="../Assets/images/croissant.jpg" alt="Butter croissant pastry" width="300">
-
-                            <h3>Butter Croissant</h3>
-                            <p><strong>R20.00</strong></p>
-
-                        </td>
-                    </tr>
-
-                </table>
-            </section>
+        <!-- Snacks Section -->
+        <section>
+            <h2 align="center">Snacks</h2>
+            <br>
+            <table width="100%">
+                <tr>
+                    <td align="center" width="25%">
+                        <img src="../Assets/images/lemon-cake.jpg" alt="Lemon drizzle cake slice - moist and tangy" width="300">
+                        <h3>Lemon Drizzle Cake</h3>
+                        <p><strong>R45.00</strong></p>
+                    </td>
+                    <td align="center" width="25%">
+                        <img src="../Assets/images/red-velvet.jpg" alt="Red velvet cake with cream cheese frosting" width="300">
+                        <h3>Red Velvet Cake</h3>
+                        <p><strong>R55.00</strong></p>
+                    </td>
+                    <td align="center" width="25%">
+                        <img src="../Assets/images/muffin.jpg" alt="Blueberry muffin - soft and packed with berries" width="300">
+                        <h3>Blueberry Muffin</h3>
+                        <p><strong>R22.00</strong></p>
+                    </td>
+                    <td align="center" width="25%">
+                        <img src="../Assets/images/croissant.jpg" alt="Butter croissant pastry - flaky and golden" width="300">
+                        <h3>Butter Croissant</h3>
+                        <p><strong>R20.00</strong></p>
+                    </td>
+                </tr>
+            </table>
+        </section>
     </main>
 
     <br><br>
-
     <hr>
 
-    <!-- Footer with copyright and back to top link -->
-     <footer>
-    <div class="footer-container">
-        <div class="footer-col">
-             <h2>About SHAZ COFFEE CO.</h2>
-            <p>SHAZ COFFEE CO. is a conceptual coffee shop designed to provide high-quality coffee and a relaxing environment for customers.
-                The brand is inspired by modern cafe culture, focusing on comfort, community, and premium beverages.
-                It aims to create a welcoming space where people can meet, work, or unwind while enjoying freshly brewed coffee.
-             </p>         
-        </div>
-    
-    <div class="footer-col">
-            <h2>IMPORTANT LINKS</h2>
-                <ul type="none">
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h2>About SHAZ COFFEE CO.</h2>
+                <p>SHAZ COFFEE CO. is a conceptual coffee shop designed to provide high-quality coffee and a relaxing environment for customers. The brand is inspired by modern cafe culture, focusing on comfort, community, and premium beverages.</p>         
+            </div>
+            <div class="footer-col">
+                <h2>IMPORTANT LINKS</h2>
+                <ul>
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="./menu.html">Menu</a></li>
-                    <li><a href="./about_us.html">About Us</a></li>
-                    <li><a href="./enquiry.html">Enquiry</a></li>
-                    <li><a href="./contact_us.html">Contact Us</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
                 </ul>
-    </div>
-        <div class="footer-col">
-            <h2>Contact Us</h2>
-                <p><strong>Address:</strong>
-                80 Voortrekker Road<br>
-                Polokwane, 0699<br>
-                South Africa</p>
-                <p><strong>Mobile:</strong>
-                082 123 4567</p>
-                <p><strong>Email:</strong>
-                mmulamuleli@icloud.com</p>
+            </div>
+            <div class="footer-col">
+                <h2>Contact Us</h2>
+                <p><strong>Address:</strong><br>80 Voortrekker Road<br>Polokwane, 0699<br>South Africa</p>
+                <p><strong>Mobile:</strong><br>082 123 4567</p>
+                <p><strong>Email:</strong><br>mmulamuleli@icloud.com</p>
+            </div>
         </div>
+
+        <!-- Live Date & Time -->
+        <div class="live-datetime">
+            <p id="datetime">Loading...</p>
         </div>
+
         <div class="copyright">
             <p>&copy; 2026 SHAZ COFFEE CO. All rights reserved.</p>
         </div>
+    </footer>
 
-     </footer>
     <script src="../Assets/js/script.js"></script>
 </body>
 </html>
